@@ -46,6 +46,8 @@ const Upload = () => {
 
         setStatusText('Analyzing...');
 
+        console.log('Instructions:', prepareInstructions({ jobTitle, jobDescription }));
+
         const feedback = await ai.feedback(
             uploadedFile.path,
             prepareInstructions({ jobTitle, jobDescription })
